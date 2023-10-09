@@ -68,3 +68,70 @@ Data is basicall 2 types
 
 ## Unstructured data:
     Data which has no structure. Like Audio, Video or photo/image etc. not structure,text files.you can not save the data in a tabular data.
+
+## Data Collection:
+    Data can be come from company app,
+    1) user generated
+    2) User behaviour
+    3) Application logs
+    4) Survery
+    5) web scraping
+
+## Data Warehousing:
+    what is data warehousing:
+    Data warehousing is a process and technology used to collect,store, manage and organize large amount of data from various sourec within an organization. Its primary purpose is to provide a centralized repository for data that can be used for reporting analysis and decision-making.
+
+
+
+## Architecture of data warehouse
+    1) data source
+      data source can be externam data like 
+      social media data, 
+      internal daa like company database,
+      operational data Like realtime data based on current activity
+      or flat file like app log entry
+    2) data staging:
+        1) Extract (you have to first extract the data from the source)
+        2) Transfrom (Then you need to transfrom the baed on the need like data preprocessing ,for example data cleaning remove duplicae, remove bad data, or remove null data ,create calculated cplu based on the riginal column,)
+        
+        3) Load: after the transform you save the preprocessed data some where maybe export as a excel file,or csv or in a relational database . this is call load data.
+      example
+
+
+
+      -----------------------------------------------------------------------------------
+
+# Extract
+import pandas as pd
+source_data = pd.read_csv('sales_data.csv')
+
+# Transform
+# Clean data by removing duplicates and handling missing values
+cleaned_data = source_data.drop_duplicates().fillna(0)
+
+# Calculate total sales and average order value
+cleaned_data['Total Sales'] = cleaned_data['Quantity'] * cleaned_data['Price']
+cleaned_data['Average Order Value'] = cleaned_data.groupby('Order ID')['Total Sales'].transform('mean')
+
+# Load
+# Load the transformed data into a data warehouse or database
+cleaned_data.to_sql('sales_data', connection, if_exists='replace')
+
+      ----------------------------------------------------------------------------
+
+
+    3) Data Warehouse : After the etl process from the data source . or we called after the staging, data is stored in a central repository which is called data warehouse. it organize the data in Relational . it also has metadata repo which holds the source and attribute of the data.
+    
+    4) Data marts: subject oriedted database which actually is a subset of the warehouse data
+    5) data analytics: after breaking the data warehouse into small data marts then come data analytics, data mning and reporting
+    6) presentation:
+        presentation means:
+        -> analytical reports 
+        -> interactive reports
+        -> static reports 
+
+
+    BASED ON THAT DATA WAREHOUSECAN BE 3 TYPES:
+ 1)  ENTERPRISE DATA WAREHOUSE / CENTRALIZED DATA WAREHOUSE (EDW)
+ 2)  OPERATIONAL DATA WAREHOUSE / REALTIME DATA WAREHOUSE/TEMPORARY DATA WAREHOUSE BECAUSE YOU NEED A ENTERPRISE DATA WARE HOUSE AS A BACKEND TO CONTINOUSLY SAVETHE DATA (ODW)
+ 3)  DATA MART/ SUBSET OF THE DATA WAREHOUSE/ SMALLER PORITON OF THE DATA WAREHOUSE / SUBJECT ORIEDTED LIKE IF A COMPANY HAS MULTIPLE SECTION OF BUSINESS THEN IT CAN BREAK IT IN A SUBSET OF THE DATA. WHICH IS CALLED DATA MART
