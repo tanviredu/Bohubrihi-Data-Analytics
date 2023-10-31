@@ -1,4 +1,4 @@
-SELECT PT.name,COUNT(O.order_id) AS ORDER_COUNT FROM Orders O
+SELECT PT.name AS PaymentMethod,COUNT(O.order_id) AS ORDER_COUNT FROM Orders O
 JOIN Payment_Transactions PTR
 ON O.order_id = PTR.order_id
 JOIN Payment_type PT
