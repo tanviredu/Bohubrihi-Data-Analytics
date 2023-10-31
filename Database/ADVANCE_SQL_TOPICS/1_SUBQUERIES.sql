@@ -85,3 +85,31 @@ HAVING APRICE > 20) AS TMP_TABLE;
 
 
 
+
+-- class Exercise
+USE food_delivery;
+SELECT * FROM MenuItems;
+
+SELECT * 
+FROM 
+	MenuItems
+WHERE 
+	price > (
+	SELECT
+    AVG
+		(price)
+	FROM
+		MenuItems
+
+);
+
+
+-- FIND OUT EVERY DAY HOW MANY
+SELECT * FROM Orders;
+
+SELECT FIRST_ORDER_DATE, COUNT(user_id)
+FROM
+(SELECT user_id AS USER_ID,MIN(DATE(order_date)) AS FIRST_ORDER_DATE FROM Orders
+GROUP BY user_id) AS INNER_TABLE
+GROUP BY FIRST_ORDER_DATE
+ORDER BY COUNT(user_id) DESC;
