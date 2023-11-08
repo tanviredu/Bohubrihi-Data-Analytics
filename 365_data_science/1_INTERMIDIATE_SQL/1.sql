@@ -1,0 +1,5 @@
+-- DQL = data querying data SELECT
+-- DDL = create alter drop TABLE/define the data structure, CREATE STAGE
+-- DML = INSERT, UPDATE,DELETE
+-- DCL = GRANT,REVOKE,DENY (DATA CONTROL LANGUAGE) (ITS FOR DATABASE ADMINISTRATOR
+
