@@ -1,0 +1,27 @@
+-- UNION operator combine but remove duplicate
+-- UNION ALL combine with dupicate
+
+-- FULL OUTER JOIN USING THE UNION
+
+SELECT * FROM User_info U
+LEFT JOIN city C 
+ON U.CITY_ID = C.city_id
+UNION
+SELECT * FROM User_info U
+Right JOIN city C 
+ON U.CITY_ID = C.city_id
+WHERE U.CITY_ID IS NULL;
+
+
+-- FULL OUTER JOIN USING THE UNION ALL
+-- REMEMBER UNION ALL WILLTAKE THE DUPLICATE VALUE
+-- SO THE COMMON VALUE (INTERSECTION)
+-- WILL COME  TWICE
+-- SO WE NEED TO TAKE IT ONE
+SELECT * FROM User_info U
+LEFT JOIN city C 
+ON U.CITY_ID = C.city_id
+UNION ALL
+SELECT * FROM User_info U
+Right JOIN city C 
+ON U.CITY_ID = C.city_id;
