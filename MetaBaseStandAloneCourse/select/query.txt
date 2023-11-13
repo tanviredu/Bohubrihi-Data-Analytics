@@ -1,0 +1,37 @@
+-- SELECT STATEMENT
+-- SELECT * FROM employees;
+-- SELECT Department, AVG(Salary) AS DEPARTMENT_AVG_SALARY FROM employees GROUP BY Department;
+-- SELECT * FROM employees WHERE FirstName = "Ataur";
+
+-- IN QUERY
+
+-- SELECT FirstName,LastName,Salary,Department FROM employees WHERE Department IN ('HR','Engineering');
+
+-- CASE STATEMENT
+
+-- SELECT EmployeeID,FirstName,LastName,Salary,
+--    CASE 
+--        WHEN Salary <= 15000 THEN "LOW"
+--        WHEN Salary > 15000 AND Salary <= 30000 THEN "HIGH"
+--        WHEN Salary > 30000 THEN "VERY HIGH"
+--        ELSE "UNKNOWN"
+--    END AS SalaryCategory
+-- FROM employees;
+
+-- LIKE QUERY
+-- SELECT * FROM employees WHERE FirstName Like 'At%';
+
+-- show tables
+-- alter table names
+-- alter table upload_property_transaction_mod_20231113210652 rename to property_transaction;
+-- now the table is updated
+-- show tables;
+
+-- SELECT * FROM property_transaction;
+
+-- how many rows in a table
+-- SELECT COUNT(*) FROM property_transaction;
+
+-- find how many row based on different square fit 
+
+-- SELECT area_sqft, COUNT(*) AS ENTRY FROM property_transaction GROUP BY area_sqft ORDER BY COUNT(*) DESC;

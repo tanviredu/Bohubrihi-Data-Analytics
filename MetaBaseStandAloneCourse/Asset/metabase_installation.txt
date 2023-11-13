@@ -1,0 +1,22 @@
+-- metabase installation --
+-- https://github.com/metabase/metabase
+-- https://www.metabase.com/docs/latest/installation-and-operation/installing-metabase
+-- https://www.metabase.com/docs/latest/installation-and-operation/running-the-metabase-jar-file
+
+Now, we want to download our Free Visualization tool. 
+Scroll down to the installation guide, and click the link. You will be redirected to the installation page. In this page, there are several ways of installation. 
+Let's go for the simplest one. We will choose, running the Jar File option. Click the link and we will be redirect again to the downloaded page. 
+Now, we can download the software by clicking the Download the Jar File for Metabase OSS. 
+Wait for the download to complete and we can run it later. 
+Now type in this command in the Command prompt. CD Download. then press enter. This means we want to change directory to the download location. if you download the meta base to a different directory, just change the Downlaod in the command prompt to the directory, where you download your software. 
+Next, we can type in, java -jar metabase.jar in the command prompt. 
+Press enter and wait for it to run. Allow access to run metabase. 
+Cool! Now, we can go to our web brownser and run our metabase. Open a new tab and type in localhost:3000. 
+If you are interested in the localhost and 3000 here, you can message me, I will create a new course teaching on this. Because this is complicated and it is not required in this course. In short, you can think that the localhost means calling our running machine, and 3000 is one of the application that have been registered in our machine. 
+Do you Remember the java -jar metabase.jar command that we type in the command prompt earlier? That is the command to register metabase as the application in our machine.
+Let's get back to our meta base. Now, you see a big welcome to metabase. Let's play around with it. 
+Choose your preferred language. For my case, I choose english. 
+What should we call you? Put in your name and email address. Company or team, just put the default value, department of awesome. Create a new password.
+For, Add your data part, we skip it now because we haven't installed the database server. We going to do later. So, just skip this for now. we will come back to this very soon. 
+Then, click finish. Congratulation! We have finish the installation for metabase. Let's move on to our next installation. 
+
