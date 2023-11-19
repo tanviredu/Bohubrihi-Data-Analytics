@@ -1,0 +1,16 @@
+-- SELECT * FROM orders LIMIT 10 OFFSET 100;
+-- SELECT COUNT(order_id) AS NUMBER_OF_ORDERS FROM orders;
+-- SELECT COUNT(DISTINCT driver_id) AS TOTAL_DRIVER FROM orders;
+-- SELECT * FROM orders LIMIT 100;
+-- SELECT COUNT(customer_id) FROM customers;
+-- SELECT first_name, last_name, address FROM customers;
+-- SELECT * FROM orders_items;
+-- SELECT COUNT(DISTINCT item_id) FROM orders_items;
+-- SELECT COUNT(*) FROM customers;
+-- SELECT * FROM restaurants;
+-- SELECT item_name,price,calories FROM food_items;
+-- SELECT order_id,customer_id,total_price FROM orders LIMIT 100;
+-- SELECT COUNT(restaurant_id) FROM restaurants;
+-- SELECT * FROM restaurants;
+-- SELECT COUNT(DISTINCT cuisine) FROM restaurants;
+-- SELECT COUNT(DISTINCT item_name) FROM food_items;
